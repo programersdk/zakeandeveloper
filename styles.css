@@ -1,0 +1,545 @@
+:root {
+  /* 🎨 Theme Colors */
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --bg-dark: #0f172a;
+  --bg-light: #f8fafc;
+  --text-dark: #1f2937;
+  --text-light: #e2e8f0;
+  --gray: #6b7280;
+  --white: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease-in-out;
+
+  /* ⚙️ Typography */
+  --font-main: 'Poppins', sans-serif;
+  --font-alt: 'Roboto', sans-serif;
+  --radius: 12px;
+}
+
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   🧭 Navbar
+=================================*/
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: var(--bg-dark) !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white) !important;
+}
+
+.navbar-brand span {
+  color: var(--primary);
+}
+
+.nav-link {
+  color: var(--text-light) !important;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* ===============================
+   🦸‍♂️ Hero Section
+=================================*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 20px;
+    background: url('https://bairesdev.mo.cloudinary.net/blog/2023/09/How-Many-Web-Developers-in-the-World-1.jpg?tx=w_1920,q_auto') center/cover no-repeat fixed;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.98));
+    z-index: 1;
+}
+
+.hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+}
+
+/* Hero social links styling */
+.hero a[href^="https://"],
+.hero a[href^="mailto:"] {
+  transition: var(--transition);
+  opacity: 0.9;
+}
+
+.hero a[href^="https://"]:hover,
+.hero a[href^="mailto:"]:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: var(--primary) !important;
+}
+
+.btn-main {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-main:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   ⚡ Features
+=================================*/
+.features {
+  height: 100vh;
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   💼 Services
+=================================*/
+.services {
+  background: var(--bg-light);
+  padding: clamp(40px, 8vw, 80px) 0;
+}
+
+.services .row {
+  --gap: clamp(15px, 2vw, 30px);
+  margin-left: calc(-1 * var(--gap));
+  margin-right: calc(-1 * var(--gap));
+}
+
+.services [class^="col-"] {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.service-card {
+  background: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  height: 100%;
+  padding: clamp(20px, 4vw, 30px);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card i {
+  color: var(--primary);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(8px, 2vw, 12px);
+}
+
+.service-card h5 {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  margin-bottom: clamp(10px, 2vw, 15px);
+}
+
+/* ===============================
+   🧱 Projects
+=================================*/
+.projects {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.project-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card .btn {
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+
+/* ===============================
+   📬 Contact
+=================================*/
+.contact {
+  background: var(--bg-light);
+  padding: 80px 0;
+}
+
+.contact form {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+  border-radius: var(--radius);
+  border: 1px solid #d1d5db;
+  transition: var(--transition);
+}
+
+.contact input:focus,
+.contact textarea:focus,
+.contact select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ===============================
+   ⚙️ Footer
+=================================*/
+footer {
+  background: var(--bg-dark);
+  color: var(--gray);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer h5 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+footer span {
+  color: var(--primary);
+}
+
+footer a {
+  color: var(--white);
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   📱 Responsive Design
+=================================*/
+
+/* Skill progress widths */
+.w-95 { width: 95% !important; }
+.w-98 { width: 98% !important; }
+.w-85 { width: 85% !important; }
+.w-92 { width: 92% !important; }
+.w-88 { width: 88% !important; }
+.w-82 { width: 82% !important; }
+.w-97 { width: 97% !important; }
+
+/* Skill bar animations */
+.skill-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: 4px;
+  width: 0;
+  transition: width 2s ease;
+  animation: fillProgress 2s ease-out forwards;
+}
+
+@keyframes fillProgress {
+  from { width: 0; }
+}
+
+/* Mode toggle button */
+.mode-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mode-toggle:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Card background utility */
+.card-bg {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-main {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .feature-card,
+  .service-card,
+  .project-card {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact form {
+    padding: 20px;
+  }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .service-card {
+    margin-bottom: 25px;
+  }
+
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .col-md-3,
+  .col-md-4,
+  .col-md-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .service-card,
+  .project-card {
+    margin-bottom: 0;
+  }
+}
+
+/* Fix for all screen sizes */
+@media (any-hover: hover) {
+  .nav-link:hover {
+    transform: translateY(-1px);
+  }
+
+  .service-card:hover,
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  
+  footer a:hover {
+    color: var(--primary) !important;
+    transform: scale(1.2);
+  }
+}
+
+/* Ensure content is always visible on mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--bg-dark);
+    padding: 1rem;
+    border-radius: var(--radius);
+  }
+
+  .navbar-nav {
+    margin-top: 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+}
+
+/* EEAT Credential Cards */
+.eeat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.eeat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Author Box */
+.author-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.author-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}

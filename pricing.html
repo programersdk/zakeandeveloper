@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Zakwan Developer Pricing - Professional Web Development Services. React, Next.js, MERN Stack. Transparent pricing for custom websites, e-commerce, SaaS apps. 2025 Launch Pricing."/>
+  <meta name="keywords" content="web development pricing, React developer cost, Next.js development price, freelance developer rates Pakistan, custom website cost"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Muhammad Rehan (Zakwan)" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pricing | Zakwan Developer - Full-Stack Development Services" />
+  <meta property="og:description" content="Transparent pricing for web development services. React, Next.js, Node.js, and full-stack solutions. 3 packages to fit your budget." />
+  <meta property="og:url" content="https://zakwandeveloper.com/pricing.html" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Web Development Pricing | Zakwan Developer" />
+  <meta name="twitter:description" content="Professional web development services at fair prices. React, Next.js, MERN Stack." />
+  
+  <link rel="canonical" href="https://zakwandeveloper.com/pricing.html" />
+  <title>Pricing | Zakwan Developer - Web Development Services 2025</title>
+
+  <!-- Last Updated Meta -->
+  <meta name="last-modified" content="2025-11-19" />
+  <meta name="updated" content="2025-11-19" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <!-- JSON-LD Structured Data for Pricing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Web Development Services",
+    "provider": {
+      "@type": "Person",
+      "name": "Muhammad Rehan (Zakwan)",
+      "url": "https://zakwandeveloper.com"
+    },
+    "areaServed": "PK",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Starter Package",
+          "price": "799",
+          "priceCurrency": "USD",
+          "description": "Up to 8 pages, fully responsive website"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional Package",
+          "price": "1899",
+          "priceCurrency": "USD",
+          "description": "Up to 25 pages, blog/CMS, e-commerce ready"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise Package",
+          "price": "3999",
+          "priceCurrency": "USD",
+          "description": "Custom SaaS, unlimited features, full support"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --success: #10b981;
+      --bg: #0f172a;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: #e2e8f0;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .navbar { background: rgba(15, 23, 42, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    
+    /* Professional Section Styles */
+    section { position: relative; }
+    h1, h2, h3, h4, h5, h6 { letter-spacing: -0.5px; }
+    .display-3 { font-weight: 700; }
+    .lead { font-weight: 400; line-height: 1.8; }
+    
+    /* Feature List Improvements */
+    .list-unstyled li {
+      line-height: 1.8;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+    .list-unstyled li i {
+      font-size: 1.1rem;
+    }
+    
+    /* Accordion Styling */
+    .accordion-button {
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+    }
+    .accordion-button:not(.collapsed) {
+      color: var(--primary);
+    }
+    .accordion-body {
+      padding: 1.5rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    /* Footer Enhancement */
+    footer {
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .pricing-card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .pricing-card:hover { 
+      transform: translateY(-16px); 
+      box-shadow: 0 24px 64px rgba(99,102,241,0.25);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .popular {
+      border: 2px solid var(--primary) !important;
+      transform: scale(1.05);
+      position: relative;
+      z-index: 10;
+      background: rgba(99,102,241,0.12);
+      box-shadow: 0 20px 60px rgba(99,102,241,0.2);
+    }
+    .popular:hover {
+      transform: scale(1.05) translateY(-16px);
+      box-shadow: 0 28px 80px rgba(99,102,241,0.35);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      color: white;
+      padding: 0.55rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+    }
+    .launch-badge {
+      background: var(--success);
+      color: white;
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .price-big { 
+      font-size: 4.5rem; 
+      font-weight: 800; 
+      color: var(--primary); 
+      line-height: 1.1; 
+      letter-spacing: -1px; 
+    }
+    .old-price { 
+      font-size: 1.8rem; 
+      text-decoration: line-through; 
+      color: #64748b; 
+      opacity: 0.8; 
+    }
+    .save-badge { 
+      background: var(--success); 
+      color: white; 
+      padding: 0.45rem 1.2rem; 
+      border-radius: 50px; 
+      font-weight: 600; 
+      font-size: 0.9rem; 
+    }
+    .guarantee-badge { 
+      background: rgba(16, 185, 129, 0.08); 
+      border: 2px solid var(--success); 
+      color: var(--success); 
+      padding: 1.2rem 1.5rem; 
+      border-radius: 14px; 
+      font-weight: 700; 
+      font-size: 0.95rem; 
+      letter-spacing: 0.3px; 
+    }
+    .btn-main { 
+      background: var(--primary); 
+      border: none; 
+      border-radius: 50px; 
+      padding: 14px 42px; 
+      font-weight: 700; 
+      font-size: 1rem; 
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      color: white;
+      box-shadow: 0 8px 20px rgba(99,102,241,0.3);
+    }
+    .btn-main:hover { 
+      background: var(--primary-dark); 
+      transform: translateY(-4px); 
+      box-shadow: 0 16px 40px rgba(99,102,241,0.45);
+    }
+    .btn-outline-light {
+      border-radius: 50px;
+      padding: 14px 42px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    .btn-outline-light:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+    
+    /* Utility Classes */
+    .brand-accent { color: var(--primary); }
+    .feature-list { max-width: 320px; }
+    .feature-list-pro { max-width: 340px; }
+    .feature-list-starter { max-width: 300px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Zakwan<span class="brand-accent">Developer</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link active" href="pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-5 mt-5 text-center">
+    <div class="container pt-5" data-aos="fade-up">
+      <span class="launch-badge mb-3 d-inline-block">2025 LAUNCH PRICING – LIMITED SPOTS</span>
+      <h1 class="display-3 fw-bold mb-4">Web Development Pricing - Premium Quality at Fair Prices</h1>
+      <p class="lead fs-3 text-muted col-lg-10 mx-auto">
+        Professional full-stack development services. Most freelancers & agencies charge <strong>$4,000–$12,000+</strong> for this level of work.<br>
+        Get the same (or better) for <strong>up to 70% less</strong> — only while I'm scaling in 2025.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5 justify-content-center">
+
+        <!-- Starter – Anchor/Decoy -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card text-center position-relative">
+            <span class="launch-badge position-absolute top-0 end-0 mt-3 me-3">Save 38%</span>
+            <h3 class="fw-bold mb-4">Starter</h3>
+            <div class="mb-4">
+              <span class="price-big">$799</span>
+              <p class="old-price mb-1">$1,299</p>
+              <p class="text-muted fw-600">one-time</p>
+            </div>
+            <ul class="list-unstyled mb-5 text-start mx-auto feature-list-starter">
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Up to 8 Pages</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Fully Responsive</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Basic SEO + Speed Optimization</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Contact Form + Google Maps</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>2 Revision Rounds</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Free Hosting Setup</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-light w-100">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Professional – HERO PACKAGE (Psychological Sweet Spot) -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="pricing-card popular text-center position-relative">
+            <div class="popular-badge"> 92% CHOOSE</div>
+            <span class="launch-badge position-absolute top-0 end-0 mt-3 me-3">Save 47%</span>
+            <h3 class="fw-bold mb-4 mt-5">Professional</h3>
+            <div class="mb-4">
+              <span class="price-big">$1,899</span>
+              <p class="old-price mb-1">$3,599</p>
+              <p class="text-muted fw-600">one-time</p>
+              <span class="save-badge d-inline-block mt-2">You save $1,700</span>
+            </div>
+            <ul class="list-unstyled mb-5 text-start mx-auto feature-list-pro">
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i><strong>Everything in Starter +</strong></li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Up to 25 Pages + Blog/CMS</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Custom Design & Smooth Animations</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>E-Commerce Ready (up to 100 products)</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Advanced SEO + 100/100 Lighthouse</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Unlimited Revisions</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>60 Days Free Support</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Conversion Optimization</li>
+            </ul>
+            <div class="guarantee-badge mb-4">100% Money-Back Guarantee</div>
+            <a href="contact.html" class="btn btn-main w-100 fs-5">Get This Package →</a>
+          </div>
+        </div>
+
+        <!-- Enterprise – Premium Tier -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card text-center position-relative">
+            <span class="launch-badge position-absolute top-0 end-0 mt-3 me-3">Custom Deal</span>
+            <h3 class="fw-bold mb-4">Enterprise / Web App</h3>
+            <div class="mb-4">
+              <span class="price-big">From $3,999</span>
+              <p class="text-muted fw-600">custom quote in 24h</p>
+            </div>
+            <ul class="list-unstyled mb-5 text-start mx-auto feature-list">
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Unlimited Pages & Features</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>Full SaaS / Dashboard</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>User Auth & Payments</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>API Integrations</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>90 Days Support + Training</li>
+              <li class="py-2"><i class="fas fa-check text-success me-3"></i>White-Label Option</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-light w-100">Get Custom Quote</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="fs-5 text-muted">All packages include: Full ownership • Mobile-first • Blazing fast • Free revisions until you love it</p>
+      </div>
+    </div>
+  </section>
+>
+   <!-- Super-Concise FAQ -->
+  <section class="py-5 bg-black">
+    <div class="container py-5">
+      <h2 class="text-center display-5 mb-5">Quick Answers</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="faq">
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                  Why so affordable?
+                </button>
+              </h2>
+              <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">2025 launch pricing while I scale. No agency markup, direct work only.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                  Unlimited revisions — really?
+                </button>
+              </h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Yes on Professional & Enterprise. I don’t stop until you love it.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                  What if I hate the result?
+                </button>
+              </h2>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Full refund within 14 days. Zero risk.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                  Payment plans?
+                </button>
+              </h2>
+              <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">50/50 or 3–4 installments on larger projects.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                  How long does it take?
+                </button>
+              </h2>
+              <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Starter: 1–2 weeks • Pro: 3–5 weeks • Enterprise: 6–12 weeks</div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-transparent border-bottom border-secondary">
+              <h2 class="accordion-header">
+                <button class="accordion-button text-white bg-transparent shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">
+                  Ongoing support?
+                </button>
+              </h2>
+              <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Yes — from $199/month (updates, backups, priority fixes).</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-5 text-center">
+    <div class="container py-5">
+      <h2 class="display-5 mb-4">Ready to Get Started?</h2>
+      <p class="lead mb-4">These launch prices won’t last forever. Book your spot before they're gone.</p>
+      <a href="contact.html" class="btn btn-main btn-lg px-5 py-4 fs-4">Claim Your Spot Now →</a>
+      <p class="mt-4 text-muted">Only 8 spots left at these prices this month</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 text-center border-top border-secondary">
+    <div class="container">
+      <h4>Zakwan<span class="brand-accent">Developer</span></h4>
+      <p class="mb-3">High-end web development at fair prices</p>
+      <div class="d-flex justify-content-center gap-4 my-4 fs-3">
+        <a href="https://github.com/zakwanch" target="_blank" rel="noopener noreferrer" class="text-white" title="GitHub" aria-label="Visit Zakwan Developer on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/zakwanch" target="_blank" rel="noopener noreferrer" class="text-white" title="LinkedIn" aria-label="Visit Zakwan Developer on LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/zakwanc" target="_blank" rel="noopener noreferrer" class="text-white" title="Twitter" aria-label="Visit Zakwan Developer on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:zakwan@example.com" class="text-white" title="Email" aria-label="Email Zakwan Developer">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p class="small opacity-75">© 2025 Zakwan Developer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXXXXXXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NXXXXXXXXXXX');
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNNNNNNNNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NNNNNNNNNN', {'anonymize_ip': true});
+  </script>
+  
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+  </script>
+</body>
+</html>

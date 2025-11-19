@@ -1,0 +1,44 @@
+# Robots.txt for Zakwan Developer Portfolio
+# Last Updated: November 2025
+
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Allow search engines to crawl assets
+Allow: *.js
+Allow: *.css
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Avoid crawling certain files
+User-agent: *
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.gitignore
+
+# Sitemap
+Sitemap: https://zakwandeveloper.com/sitemap.xml
+Sitemap: https://zakwandeveloper.com/sitemap-mobile.xml
+
+# Host preference (if using domain)
+# Host: https://zakwandeveloper.com
